@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bringing Web Pages to Life</h1>
+            <p>CSS3 Animations & JavaScript Functions</p>
+        </header>
+        
+        <!-- Part 1: CSS Animations -->
+        <section class="section">
+            <h2>Part 1: CSS3 Transitions and Animations</h2>
+            <p>Enhancing elements with CSS transitions and keyframe animations.</p>
+            
+            <div class="animation-demo">
+                <div class="animated-box pulse">Pulse Animation</div>
+                <div class="animated-box slide-in">Slide Animation</div>
+            </div>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn">Hover Me</button>
+            </div>
+            
+            <div class="code-block">
+                <span class="comment">/* CSS Keyframe Animation Example */</span><br>
+                <span class="keyword">@keyframes</span> pulse {<br>
+                &nbsp;&nbsp;0% { <span class="keyword">transform</span>: <span class="function">scale</span>(<span class="value">1</span>); }<br>
+                &nbsp;&nbsp;50% { <span class="keyword">transform</span>: <span class="function">scale</span>(<span class="value">1.1</span>); }<br>
+                &nbsp;&nbsp;100% { <span class="keyword">transform</span>: <span class="function">scale</span>(<span class="value">1</span>); }<br>
+                }
+            </div>
+        </section>
+        
+        <!-- Part 2: JavaScript Functions -->
+        <section class="section">
+            <h2>Part 2: JavaScript Functions</h2>
+            <p>Demonstrating scope, parameters, and return values with reusable functions.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn" onclick="calculateArea()">Calculate Area</button>
+                <button class="btn" onclick="stringManipulation()">String Manipulation</button>
+                <button class="btn" onclick="showScopeDemo()">Scope Demo</button>
+            </div>
+            
+            <div id="output" style="background: rgba(255, 255, 255, 0.15); padding: 15px; border-radius: 10px; margin: 15px 0; min-height: 100px;"></div>
+            
+            <div class="code-block">
+                <span class="comment">// JavaScript Function Example</span><br>
+                <span class="keyword">function</span> <span class="function">calculateRectangleArea</span>(width, height) {<br>
+                &nbsp;&nbsp;<span class="keyword">const</span> area = width * height;<br>
+                &nbsp;&nbsp;<span class="keyword">return</span> area;<br>
+                }<br><br>
+                
+                <span class="comment">// Function call with parameters</span><br>
+                <span class="keyword">const</span> result = <span class="function">calculateRectangleArea</span>(<span class="value">5</span>, <span class="value">8</span>);<br>
+                <span class="function">console</span>.<span class="function">log</span>(<span class="value">`Area: ${result}`</span>);
+            </div>
+        </section>
+        
+        <!-- Part 3: Combining CSS & JavaScript -->
+        <section class="section">
+            <h2>Part 3: Combining CSS Animations with JavaScript</h2>
+            <p>Using JavaScript to dynamically trigger CSS animations and transitions.</p>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <button class="btn" onclick="flipCard()">Flip Card</button>
+                <button class="btn" onclick="showModal()">Show Modal</button>
+                <button class="btn" onclick="startAnimation()">Start Animation</button>
+            </div>
+            
+            <div class="card">
+                <div class="card-inner" id="card">
+                    <div class="card-front">Front</div>
+                    <div class="card-back">Back</div>
+                </div>
+            </div>
+            
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <h3>Animated Modal</h3>
+                    <p>This modal appears with a smooth transition!</p>
+                    <button class="btn" onclick="hideModal()">Close</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
